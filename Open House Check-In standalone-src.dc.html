@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#F4EFE5">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F4EFE5"/>
+    <rect x="260" y="120" width="680" height="560" fill="#FFFDF9" stroke="#E4D2BD" stroke-width="4"/>
+    <rect x="260" y="120" width="680" height="40" fill="#2F6E63"/>
+    <rect x="260" y="640" width="680" height="40" fill="#2F6E63"/>
+    <g fill="#1E3F8F">
+      <circle cx="420" cy="140" r="12"/><circle cx="600" cy="140" r="12"/><circle cx="780" cy="140" r="12"/>
+      <circle cx="420" cy="660" r="12"/><circle cx="600" cy="660" r="12"/><circle cx="780" cy="660" r="12"/>
+    </g>
+    <rect x="440" y="250" width="320" height="34" fill="#292521"/>
+    <rect x="500" y="310" width="200" height="14" fill="#A85236"/>
+    <rect x="360" y="400" width="480" height="52" fill="#FAF4E9" stroke="#E0D2B8" stroke-width="3"/>
+    <rect x="360" y="476" width="480" height="52" fill="#FAF4E9" stroke="#E0D2B8" stroke-width="3"/>
+    <rect x="360" y="552" width="480" height="56" fill="#A85236"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:#E8D6B4;font-family:'Source Sans 3',sans-serif;color:#292521;}
+  input:focus{outline:none;border-color:#A85236 !important;background:#fff !important;}
+  a{color:#A85236;}
+  a:hover{color:#24558A;}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 24px;background:#F4EFE5;">
+  <div style="width:100%;max-width:700px;background:#FFFDF9;border:1px solid #E4D2BD;box-shadow:0 30px 70px rgba(41,37,33,0.13);overflow:hidden;">
+    <div style="height:26px;background-image:url('talavera-border.png');background-repeat:repeat-x;background-size:auto 26px;"></div>
+    <div style="padding:40px 48px 28px;">
+
+    <sc-if value="{{ isLang }}" hint-placeholder-val="{{ true }}">
+      <div style="text-align:center;padding:14px 0 10px;">
+        <img src="sfr-logo.png" alt="San Fernando Realty" style="display:block;height:104px;margin:0 auto 24px;">
+        <h1 style="font-family:'Playfair Display',serif;font-weight:600;font-size:52px;line-height:1.05;margin:0 0 10px;color:#292521;letter-spacing:-0.01em;">Team Perez Aguilar</h1>
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:34px;">
+          <div style="width:44px;height:1px;background:#D8C3A5;"></div>
+          <span style="font-size:13px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#A85236;">Open House Check-In</span>
+          <div style="width:44px;height:1px;background:#D8C3A5;"></div>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:26px;color:#5C5346;margin-bottom:28px;">Welcome / Bienvenido</div>
+        <div style="display:flex;gap:16px;">
+          <button type="button" onClick="{{ pickEn }}" style="flex:1;cursor:pointer;padding:28px 12px;border:1.5px solid #E4D2BD;background:#FAF4E9;font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:#292521;" style-hover="border-color:#A85236;background:#fff;">English<span style="display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#A85236;margin-top:10px;">Continue in English</span></button>
+          <button type="button" onClick="{{ pickEs }}" style="flex:1;cursor:pointer;padding:28px 12px;border:1.5px solid #E4D2BD;background:#FAF4E9;font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:#292521;" style-hover="border-color:#A85236;background:#fff;">Español<span style="display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#A85236;margin-top:10px;">Continuar en Español</span></button>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isForm }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div style="display:flex;justify-content:center;gap:8px;margin-bottom:24px;">
+          <button type="button" onClick="{{ pickEn }}" style="{{ enToggleStyle }}">EN</button>
+          <button type="button" onClick="{{ pickEs }}" style="{{ esToggleStyle }}">ES</button>
+        </div>
+        <img src="sfr-logo.png" alt="San Fernando Realty" style="display:block;height:64px;margin:0 auto 18px;">
+        <h1 style="font-family:'Playfair Display',serif;font-weight:600;font-size:40px;line-height:1.1;text-align:center;margin:0 0 12px;color:#292521;">Team Perez Aguilar</h1>
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;">
+          <div style="width:36px;height:1px;background:#D8C3A5;"></div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#A85236;">Open House Check-In</span>
+          <div style="width:36px;height:1px;background:#D8C3A5;"></div>
+        </div>
+        <div style="text-align:center;font-family:'Playfair Display',serif;font-size:24px;color:#292521;margin-bottom:6px;">{{ t.title }}</div>
+        <div style="text-align:center;font-size:17px;color:#6B6053;margin-bottom:32px;">{{ t.subtitle }}</div>
+
+        <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:22px;">
+          <div>
+            <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelName }}</label>
+            <input type="text" ref="{{ nameRef }}" style="width:100%;padding:18px 16px;border:1.5px solid #E0D2B8;font-family:'Source Sans 3',sans-serif;font-size:19px;background:#FAF4E9;color:#292521;">
+          </div>
+          <div>
+            <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelEmail }}</label>
+            <input type="email" ref="{{ emailRef }}" style="width:100%;padding:18px 16px;border:1.5px solid #E0D2B8;font-family:'Source Sans 3',sans-serif;font-size:19px;background:#FAF4E9;color:#292521;">
+          </div>
+          <div>
+            <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelPhone }}</label>
+            <input type="tel" ref="{{ phoneRef }}" style="width:100%;padding:18px 16px;border:1.5px solid #E0D2B8;font-family:'Source Sans 3',sans-serif;font-size:19px;background:#FAF4E9;color:#292521;">
+          </div>
+
+          <div>
+            <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelStatus }}</label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <sc-for list="{{ statusPills }}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <div>
+            <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelHasAgent }}</label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <sc-for list="{{ agentPills }}" as="p" hint-placeholder-count="2">
+                <button type="button" onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <sc-if value="{{ showAgent }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:22px;border-left:4px solid #24558A;background:#F2EDE2;display:flex;flex-direction:column;gap:20px;">
+              <div>
+                <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelAgentName }}</label>
+                <input type="text" ref="{{ agentNameRef }}" style="width:100%;padding:18px 16px;border:1.5px solid #E0D2B8;font-family:'Source Sans 3',sans-serif;font-size:19px;background:#fff;color:#292521;">
+              </div>
+              <div>
+                <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelAgentContact }}</label>
+                <input type="text" ref="{{ agentContactRef }}" style="width:100%;padding:18px 16px;border:1.5px solid #E0D2B8;font-family:'Source Sans 3',sans-serif;font-size:19px;background:#fff;color:#292521;">
+              </div>
+              <div>
+                <label style="display:block;font-size:15px;font-weight:600;margin-bottom:8px;color:#292521;">{{ t.labelAgentPresent }}</label>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                  <sc-for list="{{ presentPills }}" as="p" hint-placeholder-count="2">
+                    <button type="button" onClick="{{ p.onClick }}" style="{{ p.style }}">{{ p.label }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <div style="display:flex;align-items:flex-start;gap:14px;padding-top:20px;border-top:1px solid #EDE2CE;">
+            <input type="checkbox" ref="{{ consentRef }}" onChange="{{ onConsent }}" style="width:26px;height:26px;margin-top:2px;accent-color:#3E8178;flex-shrink:0;">
+            <span style="font-size:14px;color:#5C5346;line-height:1.55;">{{ t.consent }}</span>
+          </div>
+
+          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+            <div style="color:#A63A22;font-size:15px;font-weight:600;">{{ t.error }}</div>
+          </sc-if>
+
+          <button type="submit" disabled="{{ submitting }}" style="{{ submitStyle }}">{{ submitLabel }}</button>
+        </form>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isSuccess }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:52px 12px;">
+        <img src="sfr-logo.png" alt="San Fernando Realty" style="display:block;height:84px;margin:0 auto 24px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#3E8178;">{{ t.successTag }}</span>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:600;font-size:38px;margin:16px 0 12px;color:#292521;">{{ t.successTitle }}</h2>
+        <p style="color:#6B6053;font-size:18px;line-height:1.6;max-width:440px;margin:0 auto;">{{ t.successBody }}</p>
+      </div>
+    </sc-if>
+
+    <div style="margin-top:32px;padding-top:18px;border-top:1px solid #EDE2CE;text-align:center;font-size:12px;letter-spacing:0.04em;line-height:1.8;color:#8C8272;">
+      Silvia Aguilar, Broker Associate — DRE #01745879 · San Fernando Realty
+    </div>
+
+    </div>
+    <div style="height:26px;background-image:url('talavera-border.png');background-repeat:repeat-x;background-size:auto 26px;transform:scaleY(-1);"></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scriptUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Submission&quot;},&quot;$preview&quot;:{&quot;width&quot;:1024,&quot;height&quot;:1366}}">
+const TR = {
+  en: {
+    title: "Welcome — Let's Get You Signed In",
+    subtitle: "Takes about 30 seconds. Thanks for stopping by!",
+    labelName: "Full Name", labelEmail: "Email", labelPhone: "Phone Number",
+    labelStatus: "Are you...", statusBuying: "Buying", statusSelling: "Selling", statusBrowsing: "Just Browsing",
+    labelHasAgent: "Are you currently working with a real estate agent?",
+    yes: "Yes", no: "No",
+    labelAgentName: "Agent / Broker Name",
+    labelAgentContact: "Agent Contact Info (phone or email)",
+    labelAgentPresent: "Is your agent here with you today?",
+    consent: "I agree to be contacted by Team Perez Aguilar (Silvia Aguilar, DRE #01745879) by phone, text, or email regarding real estate services. Message and data rates may apply. Consent is not a condition of service.",
+    error: "Please fill in all required fields and check the consent box.",
+    submit: "Sign In", submitting: "Signing In...",
+    successTag: "Signed In", successTitle: "Thank You for Coming!",
+    successBody: "We're so glad you stopped by — we hope you enjoy the open house. One of our agents will be with you shortly if you have any questions."
+  },
+  es: {
+    title: "Bienvenido — Vamos a Registrarlo",
+    subtitle: "Toma unos 30 segundos. ¡Gracias por venir!",
+    labelName: "Nombre Completo", labelEmail: "Correo Electrónico", labelPhone: "Número de Teléfono",
+    labelStatus: "Usted está...", statusBuying: "Comprando", statusSelling: "Vendiendo", statusBrowsing: "Solo Mirando",
+    labelHasAgent: "¿Está trabajando actualmente con un agente de bienes raíces?",
+    yes: "Sí", no: "No",
+    labelAgentName: "Nombre del Agente / Corredor",
+    labelAgentContact: "Contacto del Agente (teléfono o correo)",
+    labelAgentPresent: "¿Su agente está aquí con usted hoy?",
+    consent: "Acepto que Team Perez Aguilar (Silvia Aguilar, DRE #01745879) me contacte por teléfono, mensaje de texto o correo electrónico sobre servicios de bienes raíces. Pueden aplicar tarifas de mensajes y datos. El consentimiento no es una condición del servicio.",
+    error: "Por favor complete todos los campos requeridos y marque la casilla de consentimiento.",
+    submit: "Registrarme", submitting: "Registrando...",
+    successTag: "Registrado", successTitle: "¡Gracias por Venir!",
+    successBody: "Nos alegra mucho que haya venido — esperamos que disfrute de la casa abierta. Uno de nuestros agentes lo atenderá en breve si tiene alguna pregunta."
+  }
+};
+
+class Component extends DCLogic {
+  state = { view: 'lang', lang: 'en', status: '', hasAgent: '', present: '', error: false, submitting: false };
+
+  nameRef = React.createRef();
+  emailRef = React.createRef();
+  phoneRef = React.createRef();
+  agentNameRef = React.createRef();
+  agentContactRef = React.createRef();
+  consentRef = React.createRef();
+
+  pill(label, selected, onClick) {
+    const base = "flex:1;min-width:130px;text-align:center;padding:18px 14px;cursor:pointer;font-family:'Source Sans 3',sans-serif;font-size:18px;font-weight:600;transition:all .15s ease;";
+    return {
+      label, onClick,
+      style: base + (selected
+        ? "border:1.5px solid #24558A;background:#24558A;color:#fff;"
+        : "border:1.5px solid #E0D2B8;background:#FAF4E9;color:#292521;")
+    };
+  }
+
+  toggleStyle(active) {
+    const base = "cursor:pointer;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.12em;padding:9px 18px;";
+    return base + (active
+      ? "border:1px solid #292521;background:#292521;color:#fff;"
+      : "border:1px solid #E0D2B8;background:#fff;color:#6B6053;");
+  }
+
+  setLang(lang, advance) {
+    this.setState(s => ({ lang, view: advance ? 'form' : s.view }));
+    document.documentElement.lang = lang;
+  }
+
+  submit = (e) => {
+    e.preventDefault();
+    const g = r => (r.current && r.current.value ? r.current.value.trim() : '');
+    const name = g(this.nameRef), email = g(this.emailRef), phone = g(this.phoneRef);
+    const agentName = g(this.agentNameRef), agentContact = g(this.agentContactRef);
+    const consent = !!(this.consentRef.current && this.consentRef.current.checked);
+    const { status, hasAgent, present } = this.state;
+
+    let valid = name && email && phone && status && hasAgent && consent;
+    if (hasAgent === 'Yes' && (!agentName || !agentContact || !present)) valid = false;
+    if (!valid) { this.setState({ error: true }); return; }
+
+    this.setState({ error: false, submitting: true });
+    const payload = {
+      name, email, phone, status, hasAgent,
+      agentName: hasAgent === 'Yes' ? agentName : '',
+      agentContact: hasAgent === 'Yes' ? agentContact : '',
+      agentPresent: hasAgent === 'Yes' ? present : '',
+      language: this.state.lang
+    };
+    const url = this.props.scriptUrl || '';
+    const done = () => this.succeed();
+    if (url && url.indexOf('http') === 0) {
+      fetch(url, { method: 'POST', body: JSON.stringify(payload) }).then(done).catch(done);
+    } else {
+      setTimeout(done, 400);
+    }
+  };
+
+  succeed() {
+    this.setState({ view: 'success', submitting: false });
+    this._t = setTimeout(() => this.reset(), 6000);
+  }
+
+  reset() {
+    [this.nameRef, this.emailRef, this.phoneRef, this.agentNameRef, this.agentContactRef].forEach(r => { if (r.current) r.current.value = ''; });
+    if (this.consentRef.current) this.consentRef.current.checked = false;
+    this.setState({ view: 'lang', status: '', hasAgent: '', present: '', error: false, submitting: false });
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  renderVals() {
+    const s = this.state;
+    const t = TR[s.lang];
+    return {
+      t,
+      isLang: s.view === 'lang', isForm: s.view === 'form', isSuccess: s.view === 'success',
+      error: s.error, submitting: s.submitting, showAgent: s.hasAgent === 'Yes',
+      pickEn: () => this.setLang('en', s.view === 'lang'),
+      pickEs: () => this.setLang('es', s.view === 'lang'),
+      enToggleStyle: this.toggleStyle(s.lang === 'en'),
+      esToggleStyle: this.toggleStyle(s.lang === 'es'),
+      nameRef: this.nameRef, emailRef: this.emailRef, phoneRef: this.phoneRef,
+      agentNameRef: this.agentNameRef, agentContactRef: this.agentContactRef, consentRef: this.consentRef,
+      onConsent: () => { if (s.error) this.setState({ error: false }); },
+      statusPills: [
+        this.pill(t.statusBuying, s.status === 'Buying', () => this.setState({ status: 'Buying' })),
+        this.pill(t.statusSelling, s.status === 'Selling', () => this.setState({ status: 'Selling' })),
+        this.pill(t.statusBrowsing, s.status === 'Just Browsing', () => this.setState({ status: 'Just Browsing' }))
+      ],
+      agentPills: [
+        this.pill(t.yes, s.hasAgent === 'Yes', () => this.setState({ hasAgent: 'Yes' })),
+        this.pill(t.no, s.hasAgent === 'No', () => this.setState({ hasAgent: 'No', present: '' }))
+      ],
+      presentPills: [
+        this.pill(t.yes, s.present === 'Yes', () => this.setState({ present: 'Yes' })),
+        this.pill(t.no, s.present === 'No', () => this.setState({ present: 'No' }))
+      ],
+      submitLabel: s.submitting ? t.submitting : t.submit,
+      submitStyle: "width:100%;margin-top:6px;padding:22px;border:none;background:#A85236;color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:20px;letter-spacing:0.04em;cursor:pointer;" + (s.submitting ? "opacity:0.6;cursor:default;" : ""),
+      onSubmit: this.submit
+    };
+  }
+}
+</script>
+</body>
+</html>
